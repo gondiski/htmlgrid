@@ -1,0 +1,51 @@
+/*Here we are resetting the browser defaults for the padding 
+and margin*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*We give the body a display type of grid*/
+
+body {
+    display: grid;
+    /*since we want the columns seen, we ensure the page height 
+    is the height; of our screen*/
+    height: 100vh;
+    /*We define our columns, in this instance 3 columns of 
+    1fraction each*/
+    grid-template-columns: repeat(3, 1fr);
+    /*We define in our document where our columns will be*/
+    grid-template-areas: "column-one column-two column-three";
+    /*Let us give our grid a little breathing space*/
+    grid-gap: 0.2em 0.2em;
+}
+
+
+/*Below we place our columns in their respectful positions*/
+
+.column-one {
+    /*This places column-one in our html in the first 1/3 of 
+    our screen*/
+    grid-area: column-one;
+    /*this defines our background color for the first column*/
+    background-color: mediumseagreen;
+}
+
+.column-two {
+    /*This places our column-two in our html in the second 1/3
+     of our screen*/
+    grid-area: column-two;
+    /*this defines our background color for the second column*/
+    background-color: teal;
+}
+
+.column-three {
+    /*This places our column-three in our html in the  third 1/3
+     of our screen*/
+    grid-area: column-three;
+    /*This defines our background color for the third column*/
+    background-color: silver;
+}
